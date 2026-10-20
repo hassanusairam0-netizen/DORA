@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DORA — The Building Blocks of Life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+html,body{height:100%;background:#060E1F;overflow:hidden;font-family:'DM Sans',Arial,sans-serif}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center center}
+section{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility .7s}
+section.active{opacity:1;visibility:visible}
+section aside{display:none}
+ul{padding-left:1.1em} li{padding-left:.2em}
+hr{border:none;height:0}
+table{border-collapse:collapse} th,td{padding:14px 28px;text-align:left}
+[style*="background-clip:text"]{-webkit-background-clip:text}
+section.active [data-build-in]{animation:fadein .9s ease both}
+section.active [data-build-in^="fade 2"]{animation-delay:.5s} section.active [data-build-in^="fade 3"]{animation-delay:.9s}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+#hud{position:fixed;right:16px;bottom:12px;color:#A9C8EA;font:14px 'DM Sans',Arial,sans-serif;opacity:.6;user-select:none}
+</style></head><body>
+<div id="stage">
+<section id="cover" data-transition="fade" style="background:radial-gradient(circle at 76% 52%, #173A6B 0%, #0B1A33 50%, #060E1F 100%);color:#F3F6FA;font-family:'DM Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center">
+<svg aria-label="A glowing DNA double helix crossing in front of a softly lit animal cell, with tiny floating particles" viewBox="0 0 1920 1080" width="1920" height="1080" style="position:absolute;left:0px;top:0px;width:1920px;height:1080px">
+<defs>
+<radialGradient id="ccy" cx="45%" cy="42%" r="60%"><stop offset="0" stop-color="#9FC2EC" stop-opacity="0.32"/><stop offset="0.7" stop-color="#3C6FA5" stop-opacity="0.16"/><stop offset="1" stop-color="#6FC0B8" stop-opacity="0.24"/></radialGradient>
+<radialGradient id="cnu" cx="40%" cy="38%" r="70%"><stop offset="0" stop-color="#5B78C4"/><stop offset="1" stop-color="#22396E"/></radialGradient>
+<linearGradient id="cmi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9CD8A"/><stop offset="1" stop-color="#B08A3E"/></linearGradient>
+<radialGradient id="chalo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#4FB3A9" stop-opacity="0.2"/><stop offset="1" stop-color="#4FB3A9" stop-opacity="0"/></radialGradient>
+<linearGradient id="cs1" x1="0" y1="-100" x2="0" y2="1220" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FC0B8" stop-opacity="0"/><stop offset="0.25" stop-color="#7FD0C7"/><stop offset="0.75" stop-color="#A9C8EA"/><stop offset="1" stop-color="#A9C8EA" stop-opacity="0"/></linearGradient>
+<linearGradient id="cs2" x1="0" y1="-100" x2="0" y2="1220" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E2C27A" stop-opacity="0"/><stop offset="0.25" stop-color="#E2C27A"/><stop offset="0.75" stop-color="#7FD0C7"/><stop offset="1" stop-color="#7FD0C7" stop-opacity="0"/></linearGradient>
+<filter id="cbl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<circle cx="1500" cy="600" r="560" fill="url(#chalo)"/>
+<circle cx="1500" cy="600" r="410" fill="none" stroke="#A9C8EA" stroke-opacity="0.14" stroke-width="1.5"/>
+<circle cx="1500" cy="600" r="450" fill="none" stroke="#A9C8EA" stroke-opacity="0.12" stroke-width="1.5" stroke-dasharray="2 12"/>
+<path d="M1170 600C1170 420 1310 305 1500 310C1690 315 1830 430 1825 600C1820 780 1690 890 1500 890C1310 890 1170 780 1170 600Z" fill="none" stroke="#6FC0B8" stroke-width="26" stroke-opacity="0.35" filter="url(#cbl)"/>
+<path d="M1170 600C1170 420 1310 305 1500 310C1690 315 1830 430 1825 600C1820 780 1690 890 1500 890C1310 890 1170 780 1170 600Z" fill="url(#ccy)" stroke="#7FD0C7" stroke-width="5"/>
+<path d="M1410 500Q1370 580 1410 660M1385 485Q1335 580 1385 675" fill="none" stroke="#4FB3A9" stroke-width="7" stroke-linecap="round" stroke-opacity="0.75"/>
+<circle cx="1540" cy="580" r="130" fill="#5B78C4" fill-opacity="0.35" filter="url(#cbl)"/>
+<circle cx="1540" cy="580" r="110" fill="url(#cnu)" stroke="#A9C8EA" stroke-width="4"/>
+<circle cx="1566" cy="560" r="34" fill="#17284F" fill-opacity="0.85"/>
+<path d="M1470 600q20-24 40 0t40 0t40 0M1490 640q18-20 36 0t36 0" fill="none" stroke="#8FA6DF" stroke-width="3" stroke-opacity="0.5"/>
+<g transform="translate(1330 720) rotate(-30)"><ellipse rx="70" ry="32" fill="url(#cmi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-50 0l10-18 10 36 10-36 10 36 10-36 10 36 10-36 10 36 10-36 10 18" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<g transform="translate(1680 450) rotate(40)"><ellipse rx="60" ry="28" fill="url(#cmi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-40 0l10-16 10 32 10-32 10 32 10-32 10 32 10-32 10 16" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<g transform="translate(1660 750) rotate(15)"><ellipse rx="55" ry="26" fill="url(#cmi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-40 0l10-15 10 30 10-30 10 30 10-30 10 30 10-30 10 15" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<g fill="#F1E3BC" fill-opacity="0.85"><circle cx="1290" cy="560" r="5"/><circle cx="1312" cy="598" r="4"/><circle cx="1360" cy="420" r="5"/><circle cx="1400" cy="392" r="4"/><circle cx="1560" cy="760" r="5"/><circle cx="1600" cy="830" r="4"/><circle cx="1450" cy="800" r="5"/><circle cx="1770" cy="560" r="4"/><circle cx="1752" cy="602" r="5"/><circle cx="1236" cy="640" r="4"/><circle cx="1520" cy="845" r="4"/><circle cx="1380" cy="812" r="5"/><circle cx="1610" cy="365" r="4"/><circle cx="1470" cy="380" r="5"/><circle cx="1392" cy="540" r="4"/><circle cx="1372" cy="620" r="4"/></g>
+<g transform="rotate(28 1300 540)">
+<path d="M1300 -100Q1520 -40 1300 20T1300 140T1300 260T1300 380T1300 500T1300 620T1300 740T1300 860T1300 980T1300 1100T1300 1220" fill="none" stroke="#7FD0C7" stroke-width="28" stroke-opacity="0.4" filter="url(#cbl)"/>
+<path d="M1300 -100Q1080 -40 1300 20T1300 140T1300 260T1300 380T1300 500T1300 620T1300 740T1300 860T1300 980T1300 1100T1300 1220" fill="none" stroke="#E2C27A" stroke-width="28" stroke-opacity="0.3" filter="url(#cbl)"/>
+<g stroke-width="8" stroke-linecap="round" fill="none" stroke-opacity="0.9">
+<path stroke="#4FB3A9" d="M1222 -70H1296M1194 -40H1296M1222 -10H1296M1222 170H1296M1194 200H1296M1222 230H1296M1222 410H1296M1194 440H1296M1222 470H1296M1222 650H1296M1194 680H1296M1222 710H1296M1222 890H1296M1194 920H1296M1222 950H1296M1222 1130H1296M1194 1160H1296M1222 1190H1296"/>
+<path stroke="#D9B45A" d="M1304 -70H1378M1304 -40H1406M1304 -10H1378M1304 170H1378M1304 200H1406M1304 230H1378M1304 410H1378M1304 440H1406M1304 470H1378M1304 650H1378M1304 680H1406M1304 710H1378M1304 890H1378M1304 920H1406M1304 950H1378M1304 1130H1378M1304 1160H1406M1304 1190H1378"/>
+<path stroke="#9FC2EC" d="M1222 50H1296M1194 80H1296M1222 110H1296M1222 290H1296M1194 320H1296M1222 350H1296M1222 530H1296M1194 560H1296M1222 590H1296M1222 770H1296M1194 800H1296M1222 830H1296M1222 1010H1296M1194 1040H1296M1222 1070H1296"/>
+<path stroke="#E8EEF6" d="M1304 50H1378M1304 80H1406M1304 110H1378M1304 290H1378M1304 320H1406M1304 350H1378M1304 530H1378M1304 560H1406M1304 590H1378M1304 770H1378M1304 800H1406M1304 830H1378M1304 1010H1378M1304 1040H1406M1304 1070H1378"/>
+</g>
+<path d="M1300 -100Q1520 -40 1300 20T1300 140T1300 260T1300 380T1300 500T1300 620T1300 740T1300 860T1300 980T1300 1100T1300 1220" fill="none" stroke="url(#cs1)" stroke-width="13" stroke-linecap="round"/>
+<path d="M1300 -100Q1080 -40 1300 20T1300 140T1300 260T1300 380T1300 500T1300 620T1300 740T1300 860T1300 980T1300 1100T1300 1220" fill="none" stroke="url(#cs2)" stroke-width="13" stroke-linecap="round"/>
+</g>
+<g fill="#A9C8EA" fill-opacity="0.55"><circle cx="1100" cy="140" r="3"/><circle cx="1180" cy="240" r="2"/><circle cx="1050" cy="880" r="2.5"/><circle cx="1880" cy="140" r="3"/><circle cx="1830" cy="960" r="2.5"/><circle cx="1240" cy="990" r="2"/><circle cx="1700" cy="1030" r="3"/><circle cx="980" cy="1000" r="2"/><circle cx="1860" cy="320" r="2"/><circle cx="1620" cy="90" r="2.5"/><circle cx="1400" cy="160" r="2"/><circle cx="1150" cy="420" r="1.5"/><circle cx="1080" cy="640" r="2"/><circle cx="900" cy="990" r="1.5"/><circle cx="1900" cy="760" r="2"/><circle cx="780" cy="60" r="1.5"/><circle cx="640" cy="1030" r="2"/><circle cx="1000" cy="80" r="2"/></g>
+<g fill="#E2C27A" fill-opacity="0.7"><circle cx="1220" cy="180" r="2.5"/><circle cx="1780" cy="900" r="3"/><circle cx="1120" cy="760" r="2"/><circle cx="1880" cy="560" r="2.5"/><circle cx="1500" cy="1000" r="2"/></g>
+</svg>
+<div style="width:1080px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#C9A55A">Grade 7 Science · The Building Blocks of Life</p>
+<h1 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:260px;font-weight:600;line-height:1;letter-spacing:24px;background:linear-gradient(180deg, #FFFFFF 0%, #A9C8EA 100%);background-clip:text;-webkit-text-fill-color:transparent">DORA</h1>
+<hr style="width:160px;border-top:2px solid #C9A55A">
+<p style="font-size:40px;font-weight:500;line-height:1.3;color:#DCE7F3">DNA <span style="color:#C9A55A">•</span> Organelles <span style="color:#C9A55A">•</span> Ribosomes <span style="color:#C9A55A">•</span> Average Size</p>
+<div style="height:40px"></div>
+<p style="font-size:24px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#6FC0B8">Presented by:</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1;color:#F3F6FA">Usairam <span style="color:#C9A55A">·</span> Jacob <span style="color:#C9A55A">·</span> Ryan <span style="color:#C9A55A">·</span> Colin</p>
+</div>
+<aside>Welcome everyone. Our presentation is called DORA. Each letter stands for one topic about cells: D for DNA, O for organelles, R for ribosomes and A for average size. Together they help explain the building blocks of life. Introduce each presenter by name: Usairam, Jacob, Ryan and Colin.</aside>
+</section>
+
+<section id="dna" data-transition="fade" style="background:linear-gradient(160deg, #F7F9FC 0%, #E4EDF7 100%);color:#3A4A63;font-family:'DM Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<svg aria-label="Illustration of a glowing DNA double helix, shaped like a twisted ladder with coloured rungs" data-build-in="fade 1 auto" viewBox="0 0 760 824" width="760" height="824" style="position:absolute;left:1032px;top:128px;width:760px;height:824px">
+<defs>
+<radialGradient id="dbg" cx="40%" cy="45%" r="75%"><stop offset="0" stop-color="#17396A"/><stop offset="1" stop-color="#0A1730"/></radialGradient>
+<linearGradient id="ds1" x1="0" y1="60" x2="0" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7FD0C7" stop-opacity="0.2"/><stop offset="0.25" stop-color="#7FD0C7"/><stop offset="0.75" stop-color="#A9C8EA"/><stop offset="1" stop-color="#A9C8EA" stop-opacity="0.2"/></linearGradient>
+<linearGradient id="ds2" x1="0" y1="60" x2="0" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E2C27A" stop-opacity="0.2"/><stop offset="0.25" stop-color="#E2C27A"/><stop offset="0.75" stop-color="#7FD0C7"/><stop offset="1" stop-color="#7FD0C7" stop-opacity="0.2"/></linearGradient>
+<filter id="dgl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+<rect width="760" height="824" rx="32" fill="url(#dbg)"/>
+<circle cx="280" cy="410" r="300" fill="#4FB3A9" fill-opacity="0.07"/>
+<path d="M280 60Q560 110 280 160T280 260T280 360T280 460T280 560T280 660T280 760" fill="none" stroke="#7FD0C7" stroke-width="26" stroke-opacity="0.4" filter="url(#dgl)"/>
+<path d="M280 60Q0 110 280 160T280 260T280 360T280 460T280 560T280 660T280 760" fill="none" stroke="#E2C27A" stroke-width="26" stroke-opacity="0.3" filter="url(#dgl)"/>
+<g stroke-width="10" stroke-linecap="round" fill="none">
+<path stroke="#4FB3A9" d="M181 85H276M146 210H276M181 335H276M181 485H276M146 610H276M181 735H276M284 135H379M284 285H379M284 410H414M284 535H379M284 685H379"/>
+<path stroke="#D9B45A" d="M284 85H379M284 210H414M284 335H379M284 485H379M284 610H414M284 735H379M181 135H276M181 285H276M146 410H276M181 535H276M181 685H276"/>
+<path stroke="#9FC2EC" d="M146 110H276M181 235H276M181 385H276M146 510H276M181 635H276M284 185H379M284 310H414M284 435H379M284 585H379M284 710H414"/>
+<path stroke="#E8EEF6" d="M284 110H414M284 235H379M284 385H379M284 510H414M284 635H379M181 185H276M146 310H276M181 435H276M181 585H276M146 710H276"/>
+</g>
+<path d="M280 60Q560 110 280 160T280 260T280 360T280 460T280 560T280 660T280 760" fill="none" stroke="url(#ds1)" stroke-width="14" stroke-linecap="round"/>
+<path d="M280 60Q0 110 280 160T280 260T280 360T280 460T280 560T280 660T280 760" fill="none" stroke="url(#ds2)" stroke-width="14" stroke-linecap="round"/>
+<path d="M430 310H490M346 585H490" stroke="#C9A55A" stroke-width="2"/>
+<circle cx="430" cy="310" r="6" fill="#C9A55A"/><circle cx="346" cy="585" r="6" fill="#C9A55A"/>
+<g fill="#A9C8EA" fill-opacity="0.5"><circle cx="620" cy="90" r="3"/><circle cx="700" cy="160" r="2"/><circle cx="560" cy="220" r="2.5"/><circle cx="650" cy="500" r="2"/><circle cx="710" cy="770" r="3"/><circle cx="60" cy="120" r="2"/><circle cx="90" cy="700" r="2.5"/><circle cx="600" cy="780" r="2"/><circle cx="40" cy="420" r="2"/><circle cx="700" cy="440" r="2"/><circle cx="520" cy="120" r="1.5"/><circle cx="120" cy="40" r="1.5"/></g>
+<g fill="#E2C27A" fill-opacity="0.6"><circle cx="660" cy="260" r="2.5"/><circle cx="70" cy="560" r="2"/><circle cx="560" cy="700" r="2"/></g>
+</svg>
+<p data-build-in="fade 2 auto" style="position:absolute;left:1528px;top:402px;width:240px;font-size:26px;font-weight:500;line-height:1.3;color:#E8EEF6">Twisted ladder<br>(double helix)</p>
+<p data-build-in="fade 3 auto" style="position:absolute;left:1528px;top:677px;width:240px;font-size:26px;font-weight:500;line-height:1.3;color:#E8EEF6">Ladder rungs<br>(base pairs)</p>
+<div style="width:880px;display:flex;flex-direction:column;gap:40px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:88px;font-weight:600;line-height:1.1;color:#0E1F3D"><span style="color:#A47F35">D</span> — DNA</h2>
+<ul style="font-size:30px;line-height:1.45;color:#3A4A63">
+<li>DNA stands for <b>Deoxyribonucleic Acid</b>.</li>
+<li>It carries the genetic instructions that help living things grow and function.</li>
+<li>It holds information inherited from our parents.</li>
+<li>It is shaped like a twisted ladder called a <b>double helix</b>.</li>
+<li>In eukaryotic cells, most DNA is found in the <b>nucleus</b>.</li>
+</ul>
+<div style="background:linear-gradient(135deg, #0F2244 0%, #17396A 100%);border-left:6px solid #C9A55A;border-radius:16px;padding:28px 36px;display:flex;flex-direction:column;gap:8px;box-shadow:0 12px 32px rgba(14,31,61,0.18)">
+<p style="font-size:24px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#C9A55A">Key idea</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:42px;font-style:italic;font-weight:600;line-height:1.2;color:#F3F6FA">DNA is the instruction manual of a living organism.</p>
+</div>
+</div>
+<aside>DNA stands for deoxyribonucleic acid. It is like an instruction manual that tells living things how to grow and work. We inherit our DNA from our parents, which is why we can look like them. Point to the picture: DNA is shaped like a twisted ladder, called a double helix. The rungs of the ladder are pairs of bases. In cells like ours, most DNA is kept safely inside the nucleus.</aside>
+</section>
+
+<section id="organelles" data-transition="fade" style="background:linear-gradient(160deg, #F7F9FC 0%, #E4EDF7 100%);color:#3A4A63;font-family:'DM Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<svg aria-label="Illustration of an animal cell showing the cell membrane, cytoplasm, nucleus and mitochondria" data-build-in="fade 1 auto" viewBox="0 0 760 824" width="760" height="824" style="position:absolute;left:1032px;top:128px;width:760px;height:824px">
+<defs>
+<radialGradient id="obg" cx="45%" cy="50%" r="75%"><stop offset="0" stop-color="#17396A"/><stop offset="1" stop-color="#0A1730"/></radialGradient>
+<radialGradient id="ocy" cx="42%" cy="40%" r="65%"><stop offset="0" stop-color="#BFD7F2" stop-opacity="0.42"/><stop offset="0.75" stop-color="#5E86B8" stop-opacity="0.26"/><stop offset="1" stop-color="#6FC0B8" stop-opacity="0.36"/></radialGradient>
+<radialGradient id="onu" cx="38%" cy="35%" r="70%"><stop offset="0" stop-color="#6582CF"/><stop offset="1" stop-color="#22396E"/></radialGradient>
+<linearGradient id="omi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDD497"/><stop offset="1" stop-color="#B08A3E"/></linearGradient>
+<filter id="ogl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<rect width="760" height="824" rx="32" fill="url(#obg)"/>
+<path d="M90 420C90 270 220 175 380 180C540 185 680 260 675 410C670 560 560 665 390 665C220 665 90 570 90 420Z" fill="none" stroke="#6FC0B8" stroke-width="26" stroke-opacity="0.4" filter="url(#ogl)"/>
+<path d="M90 420C90 270 220 175 380 180C540 185 680 260 675 410C670 560 560 665 390 665C220 665 90 570 90 420Z" fill="url(#ocy)" stroke="#7FD0C7" stroke-width="7"/>
+<path d="M452 345Q500 410 452 475M478 328Q538 410 478 492M504 318Q574 410 504 502" fill="none" stroke="#4FB3A9" stroke-width="7" stroke-linecap="round" stroke-opacity="0.85"/>
+<g fill="#F1E3BC"><circle cx="490" cy="372" r="4"/><circle cx="500" cy="410" r="4"/><circle cx="490" cy="448" r="4"/><circle cx="522" cy="356" r="4"/><circle cx="539" cy="410" r="4"/><circle cx="522" cy="464" r="4"/></g>
+<circle cx="330" cy="410" r="125" fill="#5B78C4" fill-opacity="0.35" filter="url(#ogl)"/>
+<circle cx="330" cy="410" r="105" fill="url(#onu)" stroke="#A9C8EA" stroke-width="4"/>
+<path d="M262 420q18-22 36 0t36 0t36 0M282 460q16-18 32 0t32 0" fill="none" stroke="#9DB2E6" stroke-width="3" stroke-opacity="0.55"/>
+<circle cx="355" cy="390" r="30" fill="#17284F" fill-opacity="0.85"/>
+<g transform="translate(205 545) rotate(-25)"><ellipse rx="66" ry="30" fill="url(#omi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-50 0l10-17 10 34 10-34 10 34 10-34 10 34 10-34 10 34 10-34 10 17" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<g transform="translate(600 380) rotate(70)"><ellipse rx="56" ry="26" fill="url(#omi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-40 0l10-15 10 30 10-30 10 30 10-30 10 30 10-30 10 15" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<g transform="translate(480 245) rotate(-12)"><ellipse rx="50" ry="24" fill="url(#omi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-35 0l10-14 10 28 10-28 10 28 10-28 10 28 5-14" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<circle cx="180" cy="350" r="16" fill="#9FC2EC" fill-opacity="0.55" stroke="#DCE7F3" stroke-width="2"/>
+<circle cx="440" cy="565" r="13" fill="#9FC2EC" fill-opacity="0.55" stroke="#DCE7F3" stroke-width="2"/>
+<g fill="#F1E3BC" fill-opacity="0.9"><circle cx="150" cy="450" r="4"/><circle cx="172" cy="478" r="4"/><circle cx="250" cy="262" r="4"/><circle cx="282" cy="240" r="4"/><circle cx="420" cy="605" r="4"/><circle cx="300" cy="606" r="4"/><circle cx="622" cy="460" r="4"/><circle cx="600" cy="490" r="4"/><circle cx="140" cy="398" r="4"/><circle cx="380" cy="632" r="4"/><circle cx="250" cy="612" r="4"/><circle cx="612" cy="290" r="4"/><circle cx="400" cy="232" r="4"/><circle cx="570" cy="590" r="4"/></g>
+<path d="M110 92L270 324M589 92V241M120 736L199 581M560 736L500 612" stroke="#C9A55A" stroke-width="2"/>
+<g fill="#C9A55A"><circle cx="270" cy="324" r="6"/><circle cx="589" cy="241" r="6"/><circle cx="199" cy="581" r="6"/><circle cx="500" cy="612" r="6"/></g>
+<g fill="#A9C8EA" fill-opacity="0.5"><circle cx="40" cy="200" r="2"/><circle cx="720" cy="140" r="2.5"/><circle cx="700" cy="680" r="2"/><circle cx="50" cy="640" r="2.5"/><circle cx="380" cy="110" r="1.5"/><circle cx="720" cy="560" r="1.5"/></g>
+</svg>
+<p data-build-in="fade 2 auto" style="position:absolute;left:1080px;top:172px;width:260px;font-size:28px;font-weight:700;color:#E8EEF6">Nucleus</p>
+<p data-build-in="fade 2 auto" style="position:absolute;left:1502px;top:172px;width:270px;font-size:28px;font-weight:700;color:#E8EEF6">Cell membrane</p>
+<p data-build-in="fade 2 auto" style="position:absolute;left:1080px;top:872px;width:300px;font-size:28px;font-weight:700;color:#E8EEF6">Mitochondrion</p>
+<p data-build-in="fade 2 auto" style="position:absolute;left:1502px;top:872px;width:270px;font-size:28px;font-weight:700;color:#E8EEF6">Cytoplasm</p>
+<div style="width:880px;display:flex;flex-direction:column;gap:40px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:88px;font-weight:600;line-height:1.1;color:#0E1F3D"><span style="color:#A47F35">O</span> — Organelles</h2>
+<ul style="font-size:30px;line-height:1.45;color:#3A4A63">
+<li>Organelles are <b>specialized structures</b> inside cells.</li>
+<li>Each organelle has a particular job.</li>
+<li>The <b>nucleus</b> contains most of the cell’s DNA.</li>
+<li><b>Mitochondria</b> release energy from food through cellular respiration.</li>
+<li>The <b>cell membrane</b> controls what enters and leaves the cell.</li>
+</ul>
+<div style="background:linear-gradient(135deg, #0F2244 0%, #17396A 100%);border-left:6px solid #C9A55A;border-radius:16px;padding:28px 36px;display:flex;flex-direction:column;gap:8px;box-shadow:0 12px 32px rgba(14,31,61,0.18)">
+<p style="font-size:24px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#C9A55A">Key idea</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:42px;font-style:italic;font-weight:600;line-height:1.2;color:#F3F6FA">Organelles work together to keep a cell alive.</p>
+</div>
+</div>
+<aside>Organelles are like the tiny organs of a cell. Each one has its own job. Point to the nucleus: it holds most of the cell’s DNA, like a control centre. Point to the mitochondria: they release energy from food through cellular respiration. Point to the cell membrane: it is the outer border that controls what goes in and out. The jelly-like cytoplasm fills the space in between. All the organelles work together to keep the cell alive.</aside>
+</section>
+
+<section id="ribosomes" data-transition="fade" style="background:linear-gradient(160deg, #F7F9FC 0%, #E4EDF7 100%);color:#3A4A63;font-family:'DM Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<svg aria-label="Illustration of a ribosome reading a strand of mRNA and building a chain of amino acids that becomes a protein" data-build-in="fade 1 auto" viewBox="0 0 760 824" width="760" height="824" style="position:absolute;left:1032px;top:128px;width:760px;height:824px">
+<defs>
+<radialGradient id="rbg" cx="45%" cy="55%" r="75%"><stop offset="0" stop-color="#17396A"/><stop offset="1" stop-color="#0A1730"/></radialGradient>
+<radialGradient id="rlg" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#8FD6CD"/><stop offset="0.6" stop-color="#3F948E"/><stop offset="1" stop-color="#245E5B"/></radialGradient>
+<radialGradient id="rsm" cx="40%" cy="30%" r="80%"><stop offset="0" stop-color="#CFE0F5"/><stop offset="1" stop-color="#5E86B8"/></radialGradient>
+<radialGradient id="ra1" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#A6E2DA"/><stop offset="1" stop-color="#3F948E"/></radialGradient>
+<radialGradient id="ra2" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#F3DFA8"/><stop offset="1" stop-color="#B08A3E"/></radialGradient>
+<radialGradient id="ra3" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#E3EEFA"/><stop offset="1" stop-color="#6F96C8"/></radialGradient>
+<radialGradient id="ra4" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#AFC0D6"/></radialGradient>
+<filter id="rgl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+</defs>
+<rect width="760" height="824" rx="32" fill="url(#rbg)"/>
+<ellipse cx="360" cy="540" rx="230" ry="170" fill="#4FB3A9" fill-opacity="0.22" filter="url(#rgl)"/>
+<path d="M190 520C180 430 260 380 360 385C470 380 545 440 535 520C530 570 470 590 360 588C250 590 195 570 190 520Z" fill="url(#rlg)" stroke="#9FD8D1" stroke-width="3"/>
+<ellipse cx="300" cy="440" rx="60" ry="26" fill="#FFFFFF" fill-opacity="0.18"/>
+<path d="M220 625C215 595 280 590 360 592C445 590 505 598 500 628C495 668 430 690 360 690C285 690 225 668 220 625Z" fill="url(#rsm)" stroke="#D5E4F4" stroke-width="3"/>
+<ellipse cx="310" cy="618" rx="50" ry="12" fill="#FFFFFF" fill-opacity="0.25"/>
+<path d="M10 610C90 590 150 630 230 610S370 590 450 610S610 630 750 605" fill="none" stroke="#D9B45A" stroke-width="10" stroke-linecap="round"/>
+<path d="M10 610C90 590 150 630 230 610S370 590 450 610S610 630 750 605" fill="none" stroke="#FFF3D1" stroke-width="10" stroke-dasharray="3 12" stroke-opacity="0.7"/>
+<path d="M378 392L382 368L398 336L424 311L456 294L492 286L527 276L558 256L580 227L592 193L593 157L582 123L562 94" fill="none" stroke="#E8EEF6" stroke-width="4" stroke-opacity="0.6"/>
+<circle cx="382" cy="368" r="16" fill="url(#ra1)"/><circle cx="398" cy="336" r="16" fill="url(#ra2)"/><circle cx="424" cy="311" r="16" fill="url(#ra3)"/><circle cx="456" cy="294" r="16" fill="url(#ra4)"/><circle cx="492" cy="286" r="16" fill="url(#ra1)"/><circle cx="527" cy="276" r="16" fill="url(#ra2)"/><circle cx="558" cy="256" r="16" fill="url(#ra3)"/><circle cx="580" cy="227" r="16" fill="url(#ra4)"/><circle cx="592" cy="193" r="16" fill="url(#ra1)"/><circle cx="593" cy="157" r="16" fill="url(#ra2)"/><circle cx="582" cy="123" r="16" fill="url(#ra3)"/><circle cx="562" cy="94" r="16" fill="url(#ra4)"/>
+<circle cx="110" cy="330" r="14" fill="url(#ra2)" fill-opacity="0.55"/><circle cx="170" cy="400" r="12" fill="url(#ra1)" fill-opacity="0.5"/><circle cx="90" cy="450" r="11" fill="url(#ra3)" fill-opacity="0.45"/>
+<path d="M250 140L442 288M538 505L572 496M120 716V618" stroke="#C9A55A" stroke-width="2"/>
+<g fill="#C9A55A"><circle cx="442" cy="288" r="6"/><circle cx="538" cy="505" r="6"/><circle cx="120" cy="610" r="6"/></g>
+<g fill="#A9C8EA" fill-opacity="0.5"><circle cx="700" cy="80" r="2.5"/><circle cx="680" cy="380" r="2"/><circle cx="40" cy="220" r="2"/><circle cx="720" cy="760" r="2.5"/><circle cx="400" cy="780" r="2"/><circle cx="300" cy="230" r="1.5"/><circle cx="660" cy="300" r="1.5"/></g>
+</svg>
+<p data-build-in="fade 2 auto" style="position:absolute;left:1072px;top:184px;width:360px;font-size:28px;font-weight:700;line-height:1.3;color:#E8EEF6">Chain of amino acids<br><span style="color:#7FD0C7">→ becomes a protein</span></p>
+<p data-build-in="fade 2 auto" style="position:absolute;left:1610px;top:606px;width:172px;font-size:28px;font-weight:700;color:#E8EEF6">Ribosome</p>
+<p data-build-in="fade 2 auto" style="position:absolute;left:1072px;top:852px;width:600px;font-size:26px;font-weight:500;color:#E8EEF6">Instructions copied from DNA (mRNA)</p>
+<div style="width:880px;display:flex;flex-direction:column;gap:40px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:88px;font-weight:600;line-height:1.1;color:#0E1F3D"><span style="color:#A47F35">R</span> — Ribosomes</h2>
+<ul style="font-size:30px;line-height:1.45;color:#3A4A63">
+<li>Ribosomes are tiny structures found in cells.</li>
+<li>They <b>make proteins</b>.</li>
+<li>Proteins help cells grow, repair themselves and carry out important jobs.</li>
+<li>Ribosomes float in the cytoplasm or are attached to the rough endoplasmic reticulum.</li>
+<li>They are much smaller than most other cell structures.</li>
+</ul>
+<div style="background:linear-gradient(135deg, #0F2244 0%, #17396A 100%);border-left:6px solid #C9A55A;border-radius:16px;padding:28px 36px;display:flex;flex-direction:column;gap:8px;box-shadow:0 12px 32px rgba(14,31,61,0.18)">
+<p style="font-size:24px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#C9A55A">Key idea</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:42px;font-style:italic;font-weight:600;line-height:1.2;color:#F3F6FA">Ribosomes are the cell’s protein-making factories.</p>
+</div>
+</div>
+<aside>Ribosomes are tiny structures that build proteins. Point to the picture: the ribosome reads a copy of the instructions from DNA, called mRNA. It joins small building blocks called amino acids into a long chain. That chain folds up to become a protein. Proteins help cells grow, repair themselves and do important jobs. Some ribosomes float freely in the cytoplasm, and others are attached to the rough endoplasmic reticulum, or rough ER.</aside>
+</section>
+
+<section id="size" data-transition="fade" style="background:linear-gradient(160deg, #F7F9FC 0%, #E4EDF7 100%);color:#3A4A63;font-family:'DM Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:row;justify-content:space-between;align-items:end;gap:48px">
+<h2 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:88px;font-weight:600;line-height:1.1;color:#0E1F3D;white-space:nowrap"><span style="color:#A47F35">A</span> — Average Size</h2>
+<p style="width:820px;font-size:28px;line-height:1.35;text-align:right;color:#3A4A63">Cells and their parts are so small that we measure them in <b>micrometres (µm)</b> and <b>nanometres (nm)</b>.</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px">
+<table style="width:872px;font-family:'DM Sans', Arial, sans-serif;font-size:28px;color:#3A4A63">
+<tr style="background:#0F2244"><th style="width:60%;padding:14px 28px;text-align:left;color:#F3F6FA">Structure</th><th style="width:40%;text-align:left;color:#F3F6FA">Approximate size</th></tr>
+<tr style="background:#FBFCFE"><td>Typical animal cell</td><td style="color:#2D6F6C">10–30 µm</td></tr>
+<tr style="background:#EAF1F9"><td>Nucleus</td><td style="color:#2D6F6C">5–10 µm</td></tr>
+<tr style="background:#FBFCFE"><td>Mitochondrion</td><td style="color:#2D6F6C">1–2 µm long</td></tr>
+<tr style="background:#EAF1F9"><td>Ribosome</td><td style="color:#2D6F6C">20–30 nm</td></tr>
+<tr style="background:#FBFCFE"><td>DNA double helix width</td><td style="color:#2D6F6C">About 2 nm</td></tr>
+</table>
+<div style="position:relative;width:760px;height:386px">
+<svg aria-label="Size comparison from large to small: an animal cell, a mitochondrion, a ribosome and a short piece of DNA, not drawn to scale" viewBox="0 0 760 386" width="760" height="386" style="width:760px;height:386px">
+<defs>
+<linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F2244"/><stop offset="1" stop-color="#17396A"/></linearGradient>
+<radialGradient id="scy" cx="42%" cy="40%" r="65%"><stop offset="0" stop-color="#BFD7F2" stop-opacity="0.45"/><stop offset="1" stop-color="#5E86B8" stop-opacity="0.3"/></radialGradient>
+<radialGradient id="snu" cx="38%" cy="35%" r="70%"><stop offset="0" stop-color="#6582CF"/><stop offset="1" stop-color="#22396E"/></radialGradient>
+<linearGradient id="smi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDD497"/><stop offset="1" stop-color="#B08A3E"/></linearGradient>
+<radialGradient id="sri" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#8FD6CD"/><stop offset="1" stop-color="#2D6F6C"/></radialGradient>
+</defs>
+<rect width="760" height="386" rx="24" fill="url(#sbg)"/>
+<circle cx="105" cy="130" r="88" fill="url(#scy)" stroke="#7FD0C7" stroke-width="4"/>
+<circle cx="115" cy="122" r="30" fill="url(#snu)" stroke="#A9C8EA" stroke-width="2"/>
+<circle cx="122" cy="116" r="9" fill="#17284F"/>
+<g fill="#F1E3BC"><circle cx="150" cy="170" r="3"/><circle cx="60" cy="110" r="3"/><circle cx="160" cy="90" r="3"/><circle cx="110" cy="190" r="3"/><circle cx="80" cy="80" r="3"/></g>
+<g transform="translate(72 168) rotate(-20)"><ellipse rx="16" ry="8" fill="url(#smi)" stroke="#F1DCA6" stroke-width="1.5"/></g>
+<circle cx="72" cy="168" r="22" fill="none" stroke="#C9A55A" stroke-width="2" stroke-dasharray="4 4"/>
+<path d="M210 118l12 12-12 12M410 118l12 12-12 12M584 118l12 12-12 12" fill="none" stroke="#C9A55A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(315 130) rotate(-20)"><ellipse rx="78" ry="38" fill="url(#smi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-60 0l12-20 12 40 12-40 12 40 12-40 12 40 12-40 12 40 12-40 12 20" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<ellipse cx="495" cy="118" rx="46" ry="32" fill="url(#sri)" stroke="#9FD8D1" stroke-width="2"/>
+<ellipse cx="482" cy="106" rx="16" ry="8" fill="#FFFFFF" fill-opacity="0.25"/>
+<ellipse cx="495" cy="156" rx="38" ry="17" fill="#A9C8EA" stroke="#D5E4F4" stroke-width="2"/>
+<path d="M440 142H550" stroke="#D9B45A" stroke-width="4" stroke-linecap="round"/>
+<g stroke-width="4" stroke-linecap="round" fill="none">
+<path stroke="#4FB3A9" d="M654 51H668M649 62.5H668M654 74H668M654 141H668M649 152.5H668M654 164H668M672 96H686M672 107.5H691M672 119H686M672 186H686M672 197.5H691M672 209H686"/>
+<path stroke="#D9B45A" d="M672 51H686M672 62.5H691M672 74H686M672 141H686M672 152.5H691M672 164H686M654 96H668M649 107.5H668M654 119H668M654 186H668M649 197.5H668M654 209H668"/>
+</g>
+<path d="M670 40Q714 62.5 670 85T670 130T670 175T670 220" fill="none" stroke="#7FD0C7" stroke-width="5" stroke-linecap="round"/>
+<path d="M670 40Q626 62.5 670 85T670 130T670 175T670 220" fill="none" stroke="#E2C27A" stroke-width="5" stroke-linecap="round"/>
+<path d="M646 228v12M694 228v12M646 234H694" stroke="#A9C8EA" stroke-width="2"/>
+</svg>
+<p style="position:absolute;left:10px;top:250px;width:190px;font-size:24px;line-height:1.35;text-align:center;color:#E8EEF6"><b>Animal cell</b><br><span style="color:#7FD0C7">10–30 µm</span></p>
+<p style="position:absolute;left:215px;top:250px;width:200px;font-size:24px;line-height:1.35;text-align:center;color:#E8EEF6"><b>Mitochondrion</b><br><span style="color:#7FD0C7">1–2 µm long</span></p>
+<p style="position:absolute;left:425px;top:250px;width:140px;font-size:24px;line-height:1.35;text-align:center;color:#E8EEF6"><b>Ribosome</b><br><span style="color:#7FD0C7">20–30 nm</span></p>
+<p style="position:absolute;left:580px;top:250px;width:180px;font-size:24px;line-height:1.35;text-align:center;color:#E8EEF6"><b>DNA width</b><br><span style="color:#7FD0C7">about 2 nm</span></p>
+<p style="position:absolute;left:0px;top:334px;width:760px;font-size:24px;font-style:italic;text-align:center;color:#A9C8EA">Illustration not drawn to scale</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;gap:24px">
+<div style="flex:1;background:#FBFCFE;border:1px solid #D5E0EC;border-left:6px solid #C9A55A;border-radius:16px;padding:20px 28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:28px;font-weight:700;color:#0E1F3D">1 micrometre (µm)</p>
+<p style="font-size:26px;color:#3A4A63">= one-millionth of a metre</p>
+</div>
+<div style="flex:1;background:#FBFCFE;border:1px solid #D5E0EC;border-left:6px solid #C9A55A;border-radius:16px;padding:20px 28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:28px;font-weight:700;color:#0E1F3D">1 nanometre (nm)</p>
+<p style="font-size:26px;color:#3A4A63">= one-billionth of a metre</p>
+</div>
+<div style="flex:1;background:#FBFCFE;border:1px solid #D5E0EC;border-left:6px solid #C9A55A;border-radius:16px;padding:20px 28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:28px;font-weight:700;color:#0E1F3D">1 µm = 1,000 nm</p>
+<p style="font-size:26px;color:#3A4A63">Nanometres are 1,000× smaller</p>
+</div>
+</div>
+<div style="background:linear-gradient(135deg, #0F2244 0%, #17396A 100%);border-left:6px solid #C9A55A;border-radius:16px;padding:20px 36px;display:flex;flex-direction:row;align-items:center;gap:28px;box-shadow:0 12px 32px rgba(14,31,61,0.18)">
+<p style="font-size:24px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#C9A55A;white-space:nowrap">Key idea</p>
+<p style="font-family:'Cormorant Garamond', Georgia, serif;font-size:36px;font-style:italic;font-weight:600;line-height:1.2;color:#F3F6FA">Cells are tiny, but they contain many structures with different sizes and jobs.</p>
+</div>
+<aside>Cells are far too small to see with our eyes, so scientists use tiny units. A micrometre is one-millionth of a metre, and a nanometre is one-billionth of a metre. One micrometre equals 1,000 nanometres. Read the table from top to bottom: each structure gets smaller. A typical animal cell is 10 to 30 micrometres, but a ribosome is only 20 to 30 nanometres, and the DNA helix is only about 2 nanometres wide. The picture shows the order from biggest to smallest, but it is not drawn to scale.</aside>
+</section>
+
+<section id="thanks" data-transition="fade" style="background:radial-gradient(circle at 78% 55%, #173A6B 0%, #0B1A33 50%, #060E1F 100%);color:#DCE7F3;font-family:'DM Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center">
+<svg aria-label="A softly glowing animal cell with a DNA double helix passing across it" viewBox="0 0 1920 1080" width="1920" height="1080" style="position:absolute;left:0px;top:0px;width:1920px;height:1080px">
+<defs>
+<radialGradient id="tcy" cx="45%" cy="42%" r="60%"><stop offset="0" stop-color="#9FC2EC" stop-opacity="0.3"/><stop offset="0.7" stop-color="#3C6FA5" stop-opacity="0.14"/><stop offset="1" stop-color="#6FC0B8" stop-opacity="0.22"/></radialGradient>
+<radialGradient id="tnu" cx="40%" cy="38%" r="70%"><stop offset="0" stop-color="#5B78C4"/><stop offset="1" stop-color="#22396E"/></radialGradient>
+<linearGradient id="tmi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9CD8A"/><stop offset="1" stop-color="#B08A3E"/></linearGradient>
+<radialGradient id="thalo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#E2C27A" stop-opacity="0.14"/><stop offset="0.5" stop-color="#4FB3A9" stop-opacity="0.1"/><stop offset="1" stop-color="#4FB3A9" stop-opacity="0"/></radialGradient>
+<linearGradient id="ts1" x1="0" y1="-100" x2="0" y2="1220" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FC0B8" stop-opacity="0"/><stop offset="0.25" stop-color="#7FD0C7"/><stop offset="0.75" stop-color="#A9C8EA"/><stop offset="1" stop-color="#A9C8EA" stop-opacity="0"/></linearGradient>
+<linearGradient id="ts2" x1="0" y1="-100" x2="0" y2="1220" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E2C27A" stop-opacity="0"/><stop offset="0.25" stop-color="#E2C27A"/><stop offset="0.75" stop-color="#7FD0C7"/><stop offset="1" stop-color="#7FD0C7" stop-opacity="0"/></linearGradient>
+<filter id="tbl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<circle cx="1500" cy="600" r="600" fill="url(#thalo)"/>
+<circle cx="1500" cy="600" r="420" fill="none" stroke="#C9A55A" stroke-opacity="0.16" stroke-width="1.5" stroke-dasharray="2 12"/>
+<path d="M1170 600C1170 420 1310 305 1500 310C1690 315 1830 430 1825 600C1820 780 1690 890 1500 890C1310 890 1170 780 1170 600Z" fill="none" stroke="#6FC0B8" stroke-width="30" stroke-opacity="0.35" filter="url(#tbl)"/>
+<path d="M1170 600C1170 420 1310 305 1500 310C1690 315 1830 430 1825 600C1820 780 1690 890 1500 890C1310 890 1170 780 1170 600Z" fill="url(#tcy)" stroke="#7FD0C7" stroke-width="5" stroke-opacity="0.85"/>
+<path d="M1410 500Q1370 580 1410 660M1385 485Q1335 580 1385 675" fill="none" stroke="#4FB3A9" stroke-width="7" stroke-linecap="round" stroke-opacity="0.7"/>
+<circle cx="1540" cy="580" r="135" fill="#5B78C4" fill-opacity="0.35" filter="url(#tbl)"/>
+<circle cx="1540" cy="580" r="110" fill="url(#tnu)" stroke="#A9C8EA" stroke-width="4"/>
+<circle cx="1566" cy="560" r="34" fill="#17284F" fill-opacity="0.85"/>
+<g transform="translate(1330 720) rotate(-30)"><ellipse rx="70" ry="32" fill="url(#tmi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-50 0l10-18 10 36 10-36 10 36 10-36 10 36 10-36 10 36 10-36 10 18" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<g transform="translate(1680 450) rotate(40)"><ellipse rx="60" ry="28" fill="url(#tmi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-40 0l10-16 10 32 10-32 10 32 10-32 10 32 10-32 10 16" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<g transform="translate(1660 750) rotate(15)"><ellipse rx="55" ry="26" fill="url(#tmi)" stroke="#F1DCA6" stroke-width="3"/><path d="M-40 0l10-15 10 30 10-30 10 30 10-30 10 30 10-30 10 15" fill="none" stroke="#8A6726" stroke-width="3"/></g>
+<g fill="#F1E3BC" fill-opacity="0.85"><circle cx="1290" cy="560" r="5"/><circle cx="1312" cy="598" r="4"/><circle cx="1360" cy="420" r="5"/><circle cx="1400" cy="392" r="4"/><circle cx="1560" cy="760" r="5"/><circle cx="1600" cy="830" r="4"/><circle cx="1450" cy="800" r="5"/><circle cx="1770" cy="560" r="4"/><circle cx="1752" cy="602" r="5"/><circle cx="1236" cy="640" r="4"/><circle cx="1520" cy="845" r="4"/><circle cx="1380" cy="812" r="5"/><circle cx="1610" cy="365" r="4"/><circle cx="1470" cy="380" r="5"/></g>
+<g transform="translate(200 0) rotate(-30 1300 540)" opacity="0.75">
+<path d="M1300 -100Q1520 -40 1300 20T1300 140T1300 260T1300 380T1300 500T1300 620T1300 740T1300 860T1300 980T1300 1100T1300 1220" fill="none" stroke="#7FD0C7" stroke-width="28" stroke-opacity="0.4" filter="url(#tbl)"/>
+<path d="M1300 -100Q1080 -40 1300 20T1300 140T1300 260T1300 380T1300 500T1300 620T1300 740T1300 860T1300 980T1300 1100T1300 1220" fill="none" stroke="#E2C27A" stroke-width="28" stroke-opacity="0.3" filter="url(#tbl)"/>
+<g stroke-width="8" stroke-linecap="round" fill="none" stroke-opacity="0.9">
+<path stroke="#4FB3A9" d="M1222 -70H1296M1194 -40H1296M1222 -10H1296M1222 170H1296M1194 200H1296M1222 230H1296M1222 410H1296M1194 440H1296M1222 470H1296M1222 650H1296M1194 680H1296M1222 710H1296M1222 890H1296M1194 920H1296M1222 950H1296M1222 1130H1296M1194 1160H1296M1222 1190H1296"/>
+<path stroke="#D9B45A" d="M1304 -70H1378M1304 -40H1406M1304 -10H1378M1304 170H1378M1304 200H1406M1304 230H1378M1304 410H1378M1304 440H1406M1304 470H1378M1304 650H1378M1304 680H1406M1304 710H1378M1304 890H1378M1304 920H1406M1304 950H1378M1304 1130H1378M1304 1160H1406M1304 1190H1378"/>
+<path stroke="#9FC2EC" d="M1222 50H1296M1194 80H1296M1222 110H1296M1222 290H1296M1194 320H1296M1222 350H1296M1222 530H1296M1194 560H1296M1222 590H1296M1222 770H1296M1194 800H1296M1222 830H1296M1222 1010H1296M1194 1040H1296M1222 1070H1296"/>
+<path stroke="#E8EEF6" d="M1304 50H1378M1304 80H1406M1304 110H1378M1304 290H1378M1304 320H1406M1304 350H1378M1304 530H1378M1304 560H1406M1304 590H1378M1304 770H1378M1304 800H1406M1304 830H1378M1304 1010H1378M1304 1040H1406M1304 1070H1378"/>
+</g>
+<path d="M1300 -100Q1520 -40 1300 20T1300 140T1300 260T1300 380T1300 500T1300 620T1300 740T1300 860T1300 980T1300 1100T1300 1220" fill="none" stroke="url(#ts1)" stroke-width="13" stroke-linecap="round"/>
+<path d="M1300 -100Q1080 -40 1300 20T1300 140T1300 260T1300 380T1300 500T1300 620T1300 740T1300 860T1300 980T1300 1100T1300 1220" fill="none" stroke="url(#ts2)" stroke-width="13" stroke-linecap="round"/>
+</g>
+<g fill="#A9C8EA" fill-opacity="0.55"><circle cx="1100" cy="140" r="3"/><circle cx="1050" cy="880" r="2.5"/><circle cx="1880" cy="140" r="3"/><circle cx="1830" cy="960" r="2.5"/><circle cx="1240" cy="990" r="2"/><circle cx="1700" cy="1030" r="3"/><circle cx="1860" cy="320" r="2"/><circle cx="1620" cy="90" r="2.5"/><circle cx="1400" cy="160" r="2"/><circle cx="1900" cy="760" r="2"/><circle cx="780" cy="60" r="1.5"/><circle cx="640" cy="1030" r="2"/><circle cx="1000" cy="60" r="2"/></g>
+<g fill="#E2C27A" fill-opacity="0.7"><circle cx="1220" cy="180" r="2.5"/><circle cx="1780" cy="900" r="3"/><circle cx="1880" cy="560" r="2.5"/><circle cx="1500" cy="1000" r="2"/></g>
+</svg>
+<div style="width:1040px;display:flex;flex-direction:column;gap:32px">
+<h1 style="font-family:'Cormorant Garamond', Georgia, serif;font-size:112px;font-weight:600;line-height:1.05;letter-spacing:2px;color:#F3F6FA">THANK YOU<br>FOR LISTENING!</h1>
+<hr style="width:160px;border-top:2px solid #C9A55A">
+<p style="font-size:26px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:#C9A55A">Remember DORA:</p>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px"><p style="width:56px;font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:700;line-height:1.1;color:#C9A55A">D</p><p style="flex:1;font-size:32px;line-height:1.35;color:#DCE7F3"><b>DNA</b> carries genetic instructions.</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px"><p style="width:56px;font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:700;line-height:1.1;color:#C9A55A">O</p><p style="flex:1;font-size:32px;line-height:1.35;color:#DCE7F3"><b>Organelles</b> perform different jobs.</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px"><p style="width:56px;font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:700;line-height:1.1;color:#C9A55A">R</p><p style="flex:1;font-size:32px;line-height:1.35;color:#DCE7F3"><b>Ribosomes</b> make proteins.</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px"><p style="width:56px;font-family:'Cormorant Garamond', Georgia, serif;font-size:56px;font-weight:700;line-height:1.1;color:#C9A55A">A</p><p style="flex:1;font-size:32px;line-height:1.35;color:#DCE7F3"><b>Average size</b> helps us understand how tiny cells and their structures are.</p></div>
+</div>
+<p style="font-size:30px;line-height:1.35;color:#A9C8EA">Presented by <span style="color:#F3F6FA">Usairam, Jacob, Ryan, and Colin</span>.</p>
+</div>
+<aside>To finish, remember DORA. D: DNA carries genetic instructions. O: organelles perform different jobs. R: ribosomes make proteins. A: average size helps us understand how tiny cells and their structures are. Thank the audience for listening and invite questions.</aside>
+</section>
+
+</div>
+<div id="hud"></div>
+<script>
+const s=[...document.querySelectorAll('#stage>section')],hud=document.getElementById('hud'),st=document.getElementById('stage');
+let i=Math.max(0,Math.min(s.length-1,(parseInt(location.hash.slice(1))||1)-1));
+function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);st.style.transform=`translate(-50%,-50%) scale(${k})`;}
+function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach((e,j)=>e.classList.toggle('active',j===i));hud.textContent=(i+1)+' / '+s.length+'  ·  ← → to move, F for full screen';history.replaceState(null,'','#'+(i+1));}
+addEventListener('resize',fit);
+addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();go(i+1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(e.key)){e.preventDefault();go(i-1)}else if(e.key==='Home')go(0);else if(e.key==='End')go(s.length-1);else if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}});
+addEventListener('click',e=>go(e.clientX<innerWidth/3?i-1:i+1));
+fit();go(i);
+</script>
+</body></html>
