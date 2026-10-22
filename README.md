@@ -1,6 +1,6 @@
 # DORA — The Building Blocks of Life
 
-A 6-slide Grade 7 science presentation on **D**NA, **O**rganelles, **R**ibosomes and **A**verage size.
+A 6-slide Grade 7 science presentation on **D**NA, **O**rganelles, **R**eproduction and **A**verage size.
 
 Presented by Usairam, Jacob, Ryan, and Colin.
 
